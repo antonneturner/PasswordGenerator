@@ -16,4 +16,5 @@ for(var i= 0; i <=complexity; i++){
     password = password + values.charAt(Math.floor(Math.random() * Math.floor(value.length-1)));
 }
 
-}
+// add password to textbox display area
+document.getElementById('display').value = password;
