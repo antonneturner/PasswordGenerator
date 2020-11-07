@@ -32,7 +32,7 @@ function generate() {
     document.getElementById("result").textContent = password;
 
 }
-
+// generate
 generate();
 
 function generateRandomLowerCase() {
@@ -52,3 +52,7 @@ function generater(min = 0, max = 1) {
     return Math.floor(Math.random() * (max + 1 - min) + min);
 }
 
+// Prompts
+
+var name = prompt("How long would you like your password to be?")
+var name = prompt( "what character types wuold you like to add?")
