@@ -51,3 +51,4 @@ function generateRandomSymbol() {
 function generater(min = 0, max = 1) {
     return Math.floor(Math.random() * (max + 1 - min) + min);
 }
+
