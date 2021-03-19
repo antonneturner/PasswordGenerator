@@ -3,7 +3,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();// var password = storePassWord
+  var password = generatePassword(); // var password = storePassWord
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -38,8 +38,8 @@ function generatePassword() {
     "w",
     "x",
     "y",
-    "Z"
-  ]
+    "Z",
+  ];
   var upperCaseArray = [
     "A",
     "B",
@@ -66,8 +66,8 @@ function generatePassword() {
     "W",
     "X",
     "Y",
-    "Z"
-  ]
+    "Z",
+  ];
   var specialCharacterArray = ["!", "@", "#", "$", "%", "^", "&", "*", "_"];
   var numberArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
   var passwordSize = prompt("what would you like your password length to be?");
@@ -79,12 +79,7 @@ function generatePassword() {
   var numberType = false;
   var storePassWord = "";
 
-
-
-
-
   if (passwordSize >= 8 && passwordSize <= 128) {
-
     lowerCaseType = confirm("is this password lowercase ?");
     console.log("lowercase", lowerCaseType);
 
@@ -97,42 +92,39 @@ function generatePassword() {
     numberType = confirm("does this password have numbers ?");
     console.log("number", numberType);
 
-
     for (var i = 0; storePassWord.length < passwordSize; i++) {
       if (lowerCaseType) {
-        var arrayRandomIndex = Math.floor(Math.random() * lowerCaseArray.length) //0 to 26  
-        storePassWord = storePassWord + lowerCaseArray[arrayRandomIndex]
+        var arrayRandomIndex = Math.floor(
+          Math.random() * lowerCaseArray.length
+        ); //0 to 26
+        storePassWord = storePassWord + lowerCaseArray[arrayRandomIndex];
       }
 
-
-
       if (UpperCaseType) {
-        var arrayRandomIndex = Math.floor(Math.random() * upperCaseArray.length) //0 to 26  
-        storePassWord = storePassWord + upperCaseArray[arrayRandomIndex]
+        var arrayRandomIndex = Math.floor(
+          Math.random() * upperCaseArray.length
+        ); //0 to 26
+        storePassWord = storePassWord + upperCaseArray[arrayRandomIndex];
       }
 
       if (specialCaseType) {
-        var arrayRandomIndex = Math.floor(Math.random() * specialCharacterArray.length) //0 to 9
-        storePassWord = storePassWord + specialCharacterArray[arrayRandomIndex]
+        var arrayRandomIndex = Math.floor(
+          Math.random() * specialCharacterArray.length
+        ); //0 to 9
+        storePassWord = storePassWord + specialCharacterArray[arrayRandomIndex];
       }
 
       if (numberType) {
-        var arrayRandomIndex = Math.floor(Math.random() * numberArray.length) //0 to 9  
-        storePassWord = storePassWord + numberArray[arrayRandomIndex]
+        var arrayRandomIndex = Math.floor(Math.random() * numberArray.length); //0 to 9
+        storePassWord = storePassWord + numberArray[arrayRandomIndex];
       }
-
-
     }
-
-
-
-
   } else {
     alert("password must be between 8 and 128");
   }
 
-  return storePassWord
+  return storePassWord;
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+//generateBtn.addEventListener("click", writePassword);
